@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABF3C1DD-5EAB-4989-9BC4-C3CB1AB303EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WPF_Game1</RootNamespace>
+    <AssemblyName>WPF Game1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="inventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="inventory.xaml.cs">
+      <DependentUpon>inventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2d-character-png-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bkreg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="hud.jpg" />
+    <Resource Include="Black-Transparent-Gradient.png" />
+    <Resource Include="Energy.jpg" />
+    <Resource Include="energytrippy.gif" />
+    <Content Include="gameback.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="healthF.jpg" />
+    <Content Include="HeroKnight\Attack1\HeroKnight_Attack1_0.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="HeroKnight\Attack1\HeroKnight_Attack1_1.png" />
+    <Resource Include="HeroKnight\Attack1\HeroKnight_Attack1_2.png" />
+    <Resource Include="HeroKnight\Attack1\HeroKnight_Attack1_3.png" />
+    <Resource Include="HeroKnight\Attack1\HeroKnight_Attack1_4.png" />
+    <Resource Include="HeroKnight\Attack1\HeroKnight_Attack1_5.png" />
+    <Resource Include="HeroKnight\Attack2\HeroKnight_Attack2_0.png" />
+    <Resource Include="HeroKnight\Attack2\HeroKnight_Attack2_1.png" />
+    <Resource Include="HeroKnight\Attack2\HeroKnight_Attack2_2.png" />
+    <Resource Include="HeroKnight\Attack2\HeroKnight_Attack2_3.png" />
+    <Resource Include="HeroKnight\Attack2\HeroKnight_Attack2_4.png" />
+    <Resource Include="HeroKnight\Attack2\HeroKnight_Attack2_5.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_0.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_1.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_2.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_3.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_4.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_5.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_6.png" />
+    <Resource Include="HeroKnight\Attack3\HeroKnight_Attack3_7.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_0.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_1.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_2.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_3.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_4.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_5.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_6.png" />
+    <Resource Include="HeroKnight\BlockIdle\HeroKnight_Block Idle_7.png" />
+    <Resource Include="HeroKnight\BlockNoEffect\HeroKnight_BlockNoEffect_0.png" />
+    <Resource Include="HeroKnight\BlockNoEffect\HeroKnight_BlockNoEffect_1.png" />
+    <Resource Include="HeroKnight\BlockNoEffect\HeroKnight_BlockNoEffect_2.png" />
+    <Resource Include="HeroKnight\BlockNoEffect\HeroKnight_BlockNoEffect_3.png" />
+    <Resource Include="HeroKnight\BlockNoEffect\HeroKnight_BlockNoEffect_4.png" />
+    <Resource Include="HeroKnight\Block\HeroKnight_Block_0.png" />
+    <Resource Include="HeroKnight\Block\HeroKnight_Block_1.png" />
+    <Resource Include="HeroKnight\Block\HeroKnight_Block_2.png" />
+    <Resource Include="HeroKnight\Block\HeroKnight_Block_3.png" />
+    <Resource Include="HeroKnight\Block\HeroKnight_Block_4.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_0.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_1.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_2.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_3.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_4.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_5.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_6.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_7.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_8.png" />
+    <Resource Include="HeroKnight\DeathNoBlood\HeroKnight_DeathNoBlood_9.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_0.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_1.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_2.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_3.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_4.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_5.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_6.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_7.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_8.png" />
+    <Resource Include="HeroKnight\Death\HeroKnight_Death_9.png" />
+    <Resource Include="HeroKnight\Fall\HeroKnight_Fall_0.png" />
+    <Resource Include="HeroKnight\Fall\HeroKnight_Fall_1.png" />
+    <Resource Include="HeroKnight\Fall\HeroKnight_Fall_2.png" />
+    <Resource Include="HeroKnight\Fall\HeroKnight_Fall_3.png" />
+    <Resource Include="HeroKnight\HeroKnight.png" />
+    <Resource Include="HeroKnight\HeroKnight_BlockNoEffect.png" />
+    <Resource Include="HeroKnight\HeroKnight_DeathNoBlood.png" />
+    <Resource Include="HeroKnight\Hurt\HeroKnight_Hurt_0.png" />
+    <Resource Include="HeroKnight\Hurt\HeroKnight_Hurt_1.png" />
+    <Resource Include="HeroKnight\Hurt\HeroKnight_Hurt_2.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_0.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_1.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_2.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_3.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_4.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_5.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_6.png" />
+    <Resource Include="HeroKnight\Idle\HeroKnight_Idle_7.png" />
+    <Resource Include="HeroKnight\Jump\HeroKnight_Jump_0.png" />
+    <Resource Include="HeroKnight\Jump\HeroKnight_Jump_1.png" />
+    <Resource Include="HeroKnight\Jump\HeroKnight_Jump_2.png" />
+    <Resource Include="HeroKnight\LedgeGrab\HeroKnight_Grab Ledge_0.png" />
+    <Resource Include="HeroKnight\LedgeGrab\HeroKnight_Grab Ledge_1.png" />
+    <Resource Include="HeroKnight\LedgeGrab\HeroKnight_Grab Ledge_2.png" />
+    <Resource Include="HeroKnight\LedgeGrab\HeroKnight_Grab Ledge_3.png" />
+    <Resource Include="HeroKnight\LedgeGrab\HeroKnight_Grab Ledge_4.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_0.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_1.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_2.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_3.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_4.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_5.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_6.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_7.png" />
+    <Resource Include="HeroKnight\Roll\HeroKnight_Roll_8.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_0.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_1.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_2.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_3.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_4.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_5.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_6.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_7.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_8.png" />
+    <Resource Include="HeroKnight\Run\HeroKnight_Run_9.png" />
+    <Resource Include="HeroKnight\WallSlide\HeroKnight_Slide_0.png" />
+    <Resource Include="HeroKnight\WallSlide\HeroKnight_Slide_1.png" />
+    <Resource Include="HeroKnight\WallSlide\HeroKnight_Slide_2.png" />
+    <Resource Include="HeroKnight\WallSlide\HeroKnight_Slide_3.png" />
+    <Resource Include="HeroKnight\WallSlide\HeroKnight_Slide_4.png" />
+    <Resource Include="pngegg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="a3c44abe04bec5cd6729a3ac3e147dc5.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="caterinca.mkv" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
